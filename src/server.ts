@@ -6,7 +6,7 @@ import { Server } from 'http';
 import { applyMiddleware } from 'graphql-middleware';
 import SwapiPeopleDatasource from './graphql/datasources';
 import graphqlSchema from './graphql';
-import config from './config';
+import config from '../config';
 
 interface MyDataSources {
   swapi: any,

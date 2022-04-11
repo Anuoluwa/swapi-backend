@@ -12,10 +12,10 @@
     "resolveJsonModule": true,                      
     "skipLibCheck": true,                           
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["node_modules/@types", "@types"],
+    "typeRoots": ["node_modules/@types", "src/@types"],
     "allowSyntheticDefaultImports": true,
   },
-  "files": ["@types/graphql.d.ts"],
-  "include": ["**/*"],
+  "files": ["src/@types/graphql.d.ts"],
+  "include": ["/src/**/*"],
   "exclude": ["node_modules", "__test__/*"]
 }
