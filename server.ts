@@ -5,8 +5,8 @@ import { GraphQLError, GraphQLFormattedError } from 'graphql';
 import { Server } from 'http';
 import { applyMiddleware } from 'graphql-middleware';
 import SwapiPeopleDatasource from './graphql/datasources';
-import config from './config';
 import graphqlSchema from './graphql';
+import config from './config';
 
 interface MyDataSources {
   swapi: any,
@@ -16,9 +16,6 @@ const { typeDefs, resolvers } = graphqlSchema;
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-// eslint-disable-next-line no-console
-console.log('config.apiUrl', config.apiUrl)
 
 const apolloServer = new ApolloServer({
   schema: applyMiddleware(
