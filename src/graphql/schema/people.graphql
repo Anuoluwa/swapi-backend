@@ -1,0 +1,42 @@
+type Person {
+    name: String
+    height: String
+    mass: String
+    gender: String
+    home_world: HomeWorld
+}
+
+
+"lookup for name and page "
+input lookUp {
+    name: String,
+    page: Int
+}
+
+
+type PeoplePayload {
+    data: [Person]
+    page: Page
+}
+
+type Page {
+    count: Int
+    previous: String
+    next: String
+}
+
+type HomeWorld {
+    name: String
+    rotation_period: String
+    orbital_period: String
+    diameter: String
+    climate: String
+    gravity: String
+    terrain: String
+    surface_water: String
+    population: String
+}
+
+type Query {
+    getPeople(filter: lookUp): PeoplePayload
+}
